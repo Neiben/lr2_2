@@ -6,11 +6,11 @@
 class stud_fclt : public student, public faculty
 {
 public:
-	float  expel(stud_fclt& sf);
-	stud_fclt();
+	
+	float  expel();
 	stud_fclt(std::string name, float loyalty, std::string NPS, float karma, float success);
-	void print(stud_fclt& sf);
-	~stud_fclt();
+	void print();
+
 	
 };
 

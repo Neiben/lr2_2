@@ -1,9 +1,10 @@
 ﻿// lr2_2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 #include "student.h"
-# include <iostream>
+#include <iostream>
 #include <string>
 #include "faculty.h"
+#include "stud_fclt.h"
 using namespace std;
 int main()
 {
@@ -21,9 +22,9 @@ int main()
 
 	student std1(NPS, karma, succes);
 
-	std1.print(std1);
+	std1.print();
 
-	std1.expel(std1);
+	std1.expel();
 
 	string name;
 	cout << "enter name of your faculty : " << endl;
@@ -35,7 +36,14 @@ int main()
 
 	faculty fc1(name, loyalty);
 
-	fc1.print(fc1);
+	fc1.print();
+
+	stud_fclt sf1(name, loyalty, NPS, karma, succes);
+
+	sf1.print();
+
+	sf1.expel();
+	
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
